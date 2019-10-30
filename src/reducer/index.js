@@ -7,7 +7,7 @@ const reminder = (action)=>{
     }
 };
 
-const reminders = (state=[],action={})=>{
+const reminders = ( state=[],action={})=>{
     switch (action.type) {
         case ADD_REMINDER:
             return [
@@ -15,6 +15,7 @@ const reminders = (state=[],action={})=>{
                 reminder(action)
             ];
         case DELETE_REMINDER :
+            console.log("666");
             return state.filter(reminder => reminder.id !== action.id);
         default: return state;
     }

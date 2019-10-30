@@ -21,8 +21,10 @@ class App extends Component{
                 <li className="list-group-item" key={reminder.id}>
                   <div className="list-item">
                     <div>{ reminder.text }</div>
-                    <div className="delete-icon" >
-                      <span className="glyphicon glyphicon-remove" onClick={ this.deleteReminder(reminder.id) }></span>
+                    <div className="delete-icon"
+                         onClick={ () => this.deleteReminder(reminder.id) }
+                    >
+                      <span className="glyphicon glyphicon-remove" ></span>
                     </div>
                   </div>
                 </li>
@@ -47,7 +49,7 @@ class App extends Component{
             <button
                 type="button"
                 className="btn btn-success"
-                onClick={ this.addReminder }
+                onClick={ this.addReminder}
             >
               Add Reminder
             </button>
